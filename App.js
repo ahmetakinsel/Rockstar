@@ -5,6 +5,7 @@ import { LanguageContext } from "./context/LanguageContext";
 import { useTranslation } from "react-i18next";
 import { NavigationContainer } from "@react-navigation/native";
 import Language from "./Screens/Language";
+import Tabs from "./navigation/Tabs";
 
 import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
@@ -21,6 +22,8 @@ export default function App() {
             headerShown: false,
           }}
         >
+          <Stack.Screen name="Dashboard" component={Tabs} />
+
           <Stack.Screen name="Language" component={Language} />
         </Stack.Navigator>
       </NavigationContainer>
