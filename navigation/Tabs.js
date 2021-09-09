@@ -1,7 +1,7 @@
 import React from "react";
 import { Text, View } from "react-native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, Fontisto } from "@expo/vector-icons";
 import Dashboard from "../Screens/Dashboard";
 
 const Tab = createBottomTabNavigator();
@@ -33,18 +33,18 @@ const Tabs = () => {
                 top: 10,
               }}
             >
-              <Ionicons
-                name="contrast-sharp"
+              <Fontisto
+                name="compass"
                 size={25}
                 style={{
                   color: focused ? "#285B9C" : "#748c94",
                   transform: [{ rotate: "90deg" }],
                 }}
-              ></Ionicons>
+              ></Fontisto>
               <Text
                 style={{ color: focused ? "#285B9C" : "#748c94", fontSize: 13 }}
               >
-                Home
+                Discover
               </Text>
             </View>
           ),
