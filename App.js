@@ -23,9 +23,8 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="EventDetails" component={EventDetails} />
-
           <Stack.Screen name="Dashboard" component={Tabs} />
+          <Stack.Screen name="EventDetails" component={EventDetails} />
           <Stack.Screen name="Language" component={Language} />
         </Stack.Navigator>
       </NavigationContainer>

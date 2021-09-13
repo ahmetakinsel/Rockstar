@@ -31,7 +31,7 @@ const Tabs = () => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                top: 10,
+                top: 12,
               }}
             >
               <Fontisto
@@ -39,6 +39,7 @@ const Tabs = () => {
                 size={25}
                 style={{
                   color: focused ? "#7a45e3" : "#748c94",
+                  marginBottom: 7,
                 }}
               ></Fontisto>
               <Text
@@ -60,7 +61,7 @@ const Tabs = () => {
               style={{
                 alignItems: "center",
                 justifyContent: "center",
-                top: 10,
+                top: 12,
               }}
             >
               <Fontisto
@@ -68,6 +69,7 @@ const Tabs = () => {
                 size={25}
                 style={{
                   color: focused ? "#7a45e3" : "#748c94",
+                  marginBottom: 7,
                 }}
               ></Fontisto>
               <Text
