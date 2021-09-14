@@ -84,8 +84,10 @@ const Dashboard = () => {
               ></Image>
             </View>
             <View style={styles.Texts}>
-              <Text style={styles.EventDate}>20 December 2021</Text>
-              <Text style={styles.EventTitle}>Rock Concert</Text>
+              <Text style={styles.EventDate}>October 2021, 12PM</Text>
+              <Text style={styles.EventTitle}>
+                Martin Garrix in Concert, London
+              </Text>
             </View>
           </View>
           <View style={styles.Events}>
@@ -96,8 +98,8 @@ const Dashboard = () => {
               ></Image>
             </View>
             <View style={styles.Texts}>
-              <Text style={styles.EventDate}>20 December 2021</Text>
-              <Text style={styles.EventTitle}>Rock Concert</Text>
+              <Text style={styles.EventDate}>December 2021, 7PM</Text>
+              <Text style={styles.EventTitle}>DJ Zedd in Concert, London</Text>
             </View>
           </View>
           <View style={styles.Events}>
@@ -108,8 +110,10 @@ const Dashboard = () => {
               ></Image>
             </View>
             <View style={styles.Texts}>
-              <Text style={styles.EventDate}>20 December 2021</Text>
-              <Text style={styles.EventTitle}>Rock Concert</Text>
+              <Text style={styles.EventDate}>January 2022, 8PM</Text>
+              <Text style={styles.EventTitle}>
+                David Guetta in Concert, Liverpool
+              </Text>
             </View>
           </View>
         </ScrollView>
@@ -120,44 +124,93 @@ const Dashboard = () => {
               <Entypo name="dots-two-vertical" size={25} color="black"></Entypo>
             </View>
           </View>
-          <View style={styles.EventsTops}>
-            <View style={styles.Texts}>
-              <View style={{ flexDirection: "row" }}>
-                <View>
-                  <Text style={styles.EventTitleTop}>Linkin Park Concert</Text>
-                  <Text style={styles.EventDateTop}>December 2021</Text>
-                  <Text style={styles.EventVenueTop}>London, UK</Text>
-                </View>
-              </View>
-              <View style={styles.AllImage}>
-                <View style={styles.EventTop}>
-                  <Image
-                    style={styles.picture}
-                    source={require("../assets/pictures/download.jpeg")}
-                  ></Image>
-                </View>
-                <View style={styles.EventTop}>
-                  <Image
-                    style={styles.picture}
-                    source={require("../assets/pictures/portrait-2.jpg")}
-                  ></Image>
-                </View>
-                <View style={styles.EventTop}>
-                  <Image
-                    style={styles.picture}
-                    source={require("../assets/pictures/portrait-3.jpg")}
-                  ></Image>
-                </View>
+          <View style={styles.EventSlide}>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+            >
+              <View style={styles.EventsTops}>
+                <View style={styles.Texts}>
+                  <View style={{ flexDirection: "row" }}>
+                    <View>
+                      <Text style={styles.EventTitleTop}>
+                        Linkin Park Concert
+                      </Text>
+                      <Text style={styles.EventDateTop}>December 2021</Text>
+                      <Text style={styles.EventVenueTop}>London, UK</Text>
+                    </View>
+                  </View>
+                  <View style={styles.AllImage}>
+                    <View style={styles.EventTop}>
+                      <Image
+                        style={styles.picture}
+                        source={require("../assets/pictures/download.jpeg")}
+                      ></Image>
+                    </View>
+                    <View style={styles.EventTop}>
+                      <Image
+                        style={styles.picture}
+                        source={require("../assets/pictures/portrait-2.jpg")}
+                      ></Image>
+                    </View>
+                    <View style={styles.EventTop}>
+                      <Image
+                        style={styles.picture}
+                        source={require("../assets/pictures/portrait-3.jpg")}
+                      ></Image>
+                    </View>
 
-                <View style={styles.Arrows}>
-                  <MaterialIcons
-                    name="keyboard-arrow-right"
-                    color="white"
-                    size={35}
-                  ></MaterialIcons>
+                    <View style={styles.Arrows}>
+                      <MaterialIcons
+                        name="keyboard-arrow-right"
+                        color="white"
+                        size={35}
+                      ></MaterialIcons>
+                    </View>
+                  </View>
                 </View>
               </View>
-            </View>
+
+              <View style={styles.EventsTops}>
+                <View style={styles.Texts}>
+                  <View style={{ flexDirection: "row" }}>
+                    <View>
+                      <Text style={styles.EventTitleTop}>Remember Concert</Text>
+                      <Text style={styles.EventDateTop}>January 2022</Text>
+                      <Text style={styles.EventVenueTop}>Liverpool, UK</Text>
+                    </View>
+                  </View>
+                  <View style={styles.AllImage}>
+                    <View style={styles.EventTop}>
+                      <Image
+                        style={styles.picture}
+                        source={require("../assets/pictures/matin.jpeg")}
+                      ></Image>
+                    </View>
+                    <View style={styles.EventTop}>
+                      <Image
+                        style={styles.picture}
+                        source={require("../assets/pictures/zedd.jpeg")}
+                      ></Image>
+                    </View>
+                    <View style={styles.EventTop}>
+                      <Image
+                        style={styles.picture}
+                        source={require("../assets/pictures/guetta.jpeg")}
+                      ></Image>
+                    </View>
+
+                    <View style={styles.Arrows}>
+                      <MaterialIcons
+                        name="keyboard-arrow-right"
+                        color="white"
+                        size={35}
+                      ></MaterialIcons>
+                    </View>
+                  </View>
+                </View>
+              </View>
+            </ScrollView>
           </View>
         </View>
         <View style={styles.EventView}>
@@ -166,7 +219,7 @@ const Dashboard = () => {
         <ScrollView
           horizontal={true}
           showsHorizontalScrollIndicator={false}
-          style={{ marginBottom: 25 }}
+          style={{ marginBottom: 47 }}
         >
           <View style={styles.Events}>
             <View style={styles.Event}>
@@ -176,8 +229,10 @@ const Dashboard = () => {
               ></Image>
             </View>
             <View style={styles.Texts}>
-              <Text style={styles.EventDate}>20 December 2021</Text>
-              <Text style={styles.EventTitle}>Rock Concert</Text>
+              <Text style={styles.EventDate}>22 September, 1PM</Text>
+              <Text style={styles.EventTitle}>
+                Space of Variation (Free for All)
+              </Text>
             </View>
           </View>
           <View style={styles.Events}>
@@ -188,8 +243,10 @@ const Dashboard = () => {
               ></Image>
             </View>
             <View style={styles.Texts}>
-              <Text style={styles.EventDate}>20 December 2021</Text>
-              <Text style={styles.EventTitle}>Rock Concert</Text>
+              <Text style={styles.EventDate}>January 2021, 12AM</Text>
+              <Text style={styles.EventTitle}>
+                Michael W. Smith and Darlene
+              </Text>
             </View>
           </View>
           <View style={styles.Events}>
@@ -200,8 +257,8 @@ const Dashboard = () => {
               ></Image>
             </View>
             <View style={styles.Texts}>
-              <Text style={styles.EventDate}>20 December 2021</Text>
-              <Text style={styles.EventTitle}>Rock Concert</Text>
+              <Text style={styles.EventDate}>November 2021, 7PM</Text>
+              <Text style={styles.EventTitle}>Nirvana in Concert, London</Text>
             </View>
           </View>
         </ScrollView>
@@ -295,16 +352,22 @@ const styles = StyleSheet.create({
   EventSection: {
     backgroundColor: "white",
     marginTop: 20,
+    paddingBottom: 30,
   },
   EventsTops: {
     backgroundColor: "rgb(47, 47, 47)",
-    width: 330,
+    width: 300,
     alignSelf: "center",
     marginTop: 22,
+    paddingBottom: 30,
     padding: 14,
+    marginRight: 20,
     borderRadius: 12,
   },
-
+  EventSlide: {
+    flexDirection: "row",
+    marginHorizontal: 16,
+  },
   EventDateTop: {
     fontSize: 16,
     fontWeight: "bold",
