@@ -7,7 +7,11 @@ const Profile = () => {
     <View style={styles.container}>
       <View style={styles.titlebar}>
         <View style={styles.back}>
-          <Entypo name="chevron-left" size={35}></Entypo>
+          <Entypo
+            name="chevron-left"
+            size={35}
+            onPress={() => navigation.goBack()}
+          ></Entypo>
         </View>
       </View>
       <View style={styles.profileView}>
@@ -44,7 +48,7 @@ const Profile = () => {
         </View>
       </View>
       <View style={styles.recentWork}>
-        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Recent Work</Text>
+        <Text style={{ fontSize: 20, fontWeight: "bold" }}>Recent Event</Text>
       </View>
       <View style={styles.Event}>
         <Image
