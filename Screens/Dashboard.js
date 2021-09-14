@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { Ionicons, Entypo, MaterialIcons } from "@expo/vector-icons";
 
-const Dashboard = () => {
+const Dashboard = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView showsHorizontalScrollIndicator={false}>

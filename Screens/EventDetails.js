@@ -9,6 +9,7 @@ import {
 } from "react-native";
 
 import { Entypo, AntDesign, EvilIcons } from "@expo/vector-icons";
+import MapView from "react-native-maps";
 
 const EventDetails = ({ navigation }) => {
   return (
@@ -22,15 +23,16 @@ const EventDetails = ({ navigation }) => {
           ></Entypo>
         </View>
         <View style={styles.Texts}>
-          <Text style={styles.EventTitle}>College football 2019</Text>
-          <Text style={styles.EventDate}>22 December 2019</Text>
+          <Text style={styles.EventTitle}> Linkin Park Concert</Text>
+          <Text style={styles.EventDate}>December 2021, London UK</Text>
         </View>
         <View style={styles.buttons}>
           <TouchableOpacity style={styles.button}>
             <Text style={styles.buttonText}>
-              {" "}
-              <AntDesign name="heart" color="#fff" size={12}></AntDesign>
-              {"  "}Tracking
+              <AntDesign name="heart" color="#fff" size={12}>
+                {" "}
+              </AntDesign>
+              Tracking
             </Text>
           </TouchableOpacity>
           <View style={styles.linkButton}>
@@ -109,12 +111,18 @@ const EventDetails = ({ navigation }) => {
         <View style={styles.locationTextView}>
           <Text style={{ fontSize: 22, fontWeight: "bold" }}>Location</Text>
         </View>
+
         <View style={styles.LocationContainer}>
           <View style={styles.locationView}>
-            <Image
+            <MapView
               style={styles.locationImg}
-              source={require("../assets/pictures/location.jpg")}
-            ></Image>
+              initialRegion={{
+                latitude: 37.78825,
+                longitude: -122.4324,
+                latitudeDelta: 0.0922,
+                longitudeDelta: 0.0421,
+              }}
+            />
           </View>
           <View style={styles.itemsView}>
             <View style={styles.concertView}>
@@ -124,18 +132,34 @@ const EventDetails = ({ navigation }) => {
               ></Image>
             </View>
             <View style={styles.videoView}>
-              <AntDesign name="playcircleo" size={50} color="pink"></AntDesign>
+              <Text style={styles.videoText}>VIDEO</Text>
+              <AntDesign name="playcircleo" size={50} color="white"></AntDesign>
             </View>
           </View>
         </View>
         <View style={styles.descriptionView}>
-          <Text style={{ fontWeight: "bold", fontSize: 22, marginLeft: 30 }}>
+          <Text
+            style={{
+              fontWeight: "bold",
+              fontSize: 22,
+              marginLeft: 20,
+              marginTop: 10,
+            }}
+          >
             Description
           </Text>
         </View>
         <View style={styles.descriptionTextView}>
           <View style={{ flexDirection: "row", justifyContent: "center" }}>
-            <Text style={{ fontSize: 16, marginTop: 10, marginLeft: 30 }}>
+            <Text
+              style={{
+                fontSize: 16,
+                fontWeight: "300",
+                marginTop: 10,
+                marginLeft: 20,
+                marginRight: 20,
+              }}
+            >
               There are many variations of passages of Lorem Ipsum available,
               but the majority have suffered alteration in some form, by
               injected humour, or randomised words which don't look even
@@ -169,15 +193,16 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "#fff",
-    marginLeft: 15,
     marginTop: 10,
+    paddingTop: 2,
+    alignSelf: "center",
     fontSize: 15,
   },
   linkButton: {
     flexDirection: "row",
     justifyContent: "center",
     marginLeft: 15,
-    backgroundColor: "lightgrey",
+    backgroundColor: "rgb(240, 236, 252)",
     width: 45,
     height: 45,
     borderRadius: 10,
@@ -231,8 +256,8 @@ const styles = StyleSheet.create({
   },
   locationImg: {
     width: 190,
-    height: 250,
-    marginLeft: 10,
+    height: 260,
+    marginLeft: 15,
     borderRadius: 10,
     marginTop: 10,
   },
@@ -241,17 +266,27 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
   },
   concertImg: {
-    width: 120,
+    width: 130,
     height: 150,
-    borderRadius: 10,
+    borderRadius: 12,
     marginBottom: 20,
     marginTop: 10,
+    marginLeft: 10,
   },
 
   videoView: {
     flexDirection: "row",
-    justifyContent: "flex-end",
-    marginRight: 30,
+    justifyContent: "center",
+    padding: 20,
+    marginLeft: 12,
+    borderRadius: 12,
+    backgroundColor: "rgb(255, 119, 173)",
+  },
+  videoText: {
+    transform: [{ rotate: "270deg" }],
+    color: "white",
+    fontSize: 15,
+    fontWeight: "bold",
   },
   descriptionView: {
     flexDirection: "row",
@@ -261,5 +296,6 @@ const styles = StyleSheet.create({
 
   descriptionTextView: {
     flexDirection: "row",
+    marginBottom: 30,
   },
 });
