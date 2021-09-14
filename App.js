@@ -7,8 +7,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import Language from "./Screens/Language";
 import Tabs from "./navigation/Tabs";
 import EventDetails from "./Screens/EventDetails";
-import Events from "./Screens/Events";
-import ProfileScreen from "./Screens/Profile";
+import ProfileScreen from "./Screens/ProfileScreen";
 
 import { createStackNavigator } from "@react-navigation/stack";
 const Stack = createStackNavigator();
@@ -26,8 +25,8 @@ export default function App() {
           }}
         >
           <Stack.Screen name="ProfileScreen" component={Tabs} />
-          <Stack.Screen name="EventDetails" component={EventDetails} />
           <Stack.Screen name="Dashboard" component={Tabs} />
+          <Stack.Screen name="EventDetails" component={EventDetails} />
           <Stack.Screen name="Language" component={Language} />
         </Stack.Navigator>
       </NavigationContainer>

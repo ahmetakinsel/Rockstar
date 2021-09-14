@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons, Fontisto } from "@expo/vector-icons";
 import Dashboard from "../Screens/Dashboard";
 import Events from "../Screens/Events";
-import ProfileScreen from "../Screens/Profile";
+import ProfileScreen from "../Screens/ProfileScreen";
 
 const Tab = createBottomTabNavigator();
 
