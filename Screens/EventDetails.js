@@ -10,7 +10,7 @@ import {
 
 import { Entypo, AntDesign, EvilIcons } from "@expo/vector-icons";
 
-const EventDetails = () => {
+const EventDetails = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView showsHorizontalScrollIndicator={false}>
