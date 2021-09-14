@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, ScrollView, Image } from "react-native";
 import { Ionicons, Entypo, MaterialIcons } from "@expo/vector-icons";
 
-const Events = () => {
+const Events = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <ScrollView showsHorizontalScrollIndicator={false}>
@@ -101,6 +101,7 @@ const Events = () => {
                     name="keyboard-arrow-right"
                     color="white"
                     size={35}
+                    onPress={() => navigation.navigate("EventDetails")}
                   ></MaterialIcons>
                 </View>
               </View>
