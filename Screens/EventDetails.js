@@ -15,7 +15,11 @@ const EventDetails = () => {
     <View style={styles.container}>
       <ScrollView showsHorizontalScrollIndicator={false}>
         <View style={styles.subContainer}>
-          <Entypo name="chevron-left" size={30}></Entypo>
+          <Entypo
+            name="chevron-left"
+            size={30}
+            onPress={() => navigation.goBack()}
+          ></Entypo>
         </View>
         <View style={styles.Texts}>
           <Text style={styles.EventTitle}>College football 2019</Text>
